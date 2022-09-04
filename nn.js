@@ -111,9 +111,11 @@ class NeuralNetwork {
         this.who = e("who + (r .* dwho)", { who, r, dwho });
     };
     predict = (input) => {
-        /*...*/
+        return this.forward(input);
     };
     train = (input, target) => {
-        /*...*/
+        this.forward(input);
+        this.backward(target);
+        this.update();
     };
 }
