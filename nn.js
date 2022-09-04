@@ -101,7 +101,14 @@ class NeuralNetwork {
         this.cache.loss.push(sum(sqr(dEdA)));
     };
     update = () => {
-        /*...*/
+        const wih = this.wih;
+        const who = this.who;
+        const dwih = this.cache.dwih;
+        const dwho = this.cache.dwho;
+        const r = this.learningrate;
+
+        this.wih = e("wih + (r .* dwih)", { wih, r, dwih });
+        this.who = e("who + (r .* dwho)", { who, r, dwho });
     };
     predict = (input) => {
         /*...*/
