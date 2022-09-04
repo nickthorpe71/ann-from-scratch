@@ -1,2 +1,2 @@
-./mnist/mnist_test.csv
-./mnist/mnist_train.csv
+mnist/test.csv
+mnist/train.csv
